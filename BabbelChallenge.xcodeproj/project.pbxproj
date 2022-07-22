@@ -23,6 +23,7 @@
 		E7DF20BF288A9477001EF39B /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20BE288A9477001EF39B /* WordsManager.swift */; };
 		E7DF20C1288A9B93001EF39B /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C0288A9B93001EF39B /* WordPair.swift */; };
 		E7DF20C3288A9BEE001EF39B /* QuizPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C2288A9BEE001EF39B /* QuizPair.swift */; };
+		E7DF20C5288ACE71001EF39B /* GameConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C4288ACE71001EF39B /* GameConfigs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		E7DF20BE288A9477001EF39B /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
 		E7DF20C0288A9B93001EF39B /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
 		E7DF20C2288A9BEE001EF39B /* QuizPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPair.swift; sourceTree = "<group>"; };
+		E7DF20C4288ACE71001EF39B /* GameConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfigs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				E7DF20BE288A9477001EF39B /* WordsManager.swift */,
 				E7DF20C0288A9B93001EF39B /* WordPair.swift */,
 				E7DF20C2288A9BEE001EF39B /* QuizPair.swift */,
+				E7DF20C4288ACE71001EF39B /* GameConfigs.swift */,
 			);
 			path = WordsManager;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				E7DF20BA288A8E87001EF39B /* GameViewModel.swift in Sources */,
 				E7DF20C1288A9B93001EF39B /* WordPair.swift in Sources */,
 				E7DF20BF288A9477001EF39B /* WordsManager.swift in Sources */,
+				E7DF20C5288ACE71001EF39B /* GameConfigs.swift in Sources */,
 				E7DF20B2288A8BF3001EF39B /* GameViewController.swift in Sources */,
 				E7DF2085288A85D7001EF39B /* BaseViewController.swift in Sources */,
 				E7DF2081288A85D7001EF39B /* AppDelegate.swift in Sources */,

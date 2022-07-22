@@ -9,4 +9,44 @@ import Foundation
 
 class GameViewModel: GameViewModelProtocol {
     
+    var changeHandler: ((GameViewModelChange) -> Void)?
+    
+    var correctAttempts: Int
+    var wrongAttempts: Int
+    
+    var currentQuizPair: QuizPair?
+    
+    let wordsManager: WordsManager
+    
+    init() {
+        correctAttempts = 0
+        wrongAttempts = 0
+        let gameConfigs = GameConfigs(dataFileName: "words", probabilityRoundAmount: 4, correctPairPerProbabilityRoundAmount: 1, wrongAnswerOffset: 1)
+        wordsManager = WordsManager(gameConfigs)
+    }
+    
+    func gameStarted() {
+        startNewRound()
+    }
+    
+    func roundCompleted(withResponse response: QuizPair.ResultType) {
+        guard let currentQuizPair = currentQuizPair else {
+            return
+        }
+        
+        response == currentQuizPair.resultType ? (correctAttempts += 1) : (wrongAttempts += 1)
+        emit(.statsUpdated)
+        startNewRound()
+    }
+    
+    private func startNewRound() {
+        let quizPair = wordsManager.getQuizPair()
+        currentQuizPair = quizPair
+        emit(.roundStarted(quizPair: quizPair))
+    }
+    
+    private func emit(_ change: GameViewModelChange) {
+        changeHandler?(change)
+    }
+    
 }
