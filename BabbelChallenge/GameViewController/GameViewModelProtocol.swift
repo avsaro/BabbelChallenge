@@ -11,6 +11,7 @@ enum GameViewModelChange {
     
     case roundStarted(quizPair: QuizPair)
     case statsUpdated
+    case gameEnded
     
 }
 

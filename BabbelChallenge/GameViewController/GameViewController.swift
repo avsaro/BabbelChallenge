@@ -34,6 +34,8 @@ class GameViewController: BaseViewController {
                 case .statsUpdated:
                     self.correctAttemptsAmountLabel.text = "\(self.viewModel.correctAttempts)"
                     self.wrongAttemptsAmountLabel.text = "\(self.viewModel.wrongAttempts)"
+                case .gameEnded:
+                    exit(0)
             }
         }
     }

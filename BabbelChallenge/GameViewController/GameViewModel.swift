@@ -36,6 +36,12 @@ class GameViewModel: GameViewModelProtocol {
         
         response == currentQuizPair.resultType ? (correctAttempts += 1) : (wrongAttempts += 1)
         emit(.statsUpdated)
+        
+        if isMaxWrongAttemptsReached() || isMaxTotalAttemptsReached() {
+            emit(.gameEnded)
+            return
+        }
+        
         startNewRound()
     }
     
@@ -49,4 +55,11 @@ class GameViewModel: GameViewModelProtocol {
         changeHandler?(change)
     }
     
+    private func isMaxWrongAttemptsReached() -> Bool {
+        return wrongAttempts >= 3
+    }
+    
+    private func isMaxTotalAttemptsReached() -> Bool {
+        return correctAttempts + wrongAttempts >= 15
+    }
 }
