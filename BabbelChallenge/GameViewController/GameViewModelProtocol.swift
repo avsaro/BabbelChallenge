@@ -20,8 +20,9 @@ protocol GameViewModelProtocol {
     var changeHandler: ((GameViewModelChange) -> Void)? { get set }
     var correctAttempts: Int { get }
     var wrongAttempts: Int { get }
+    var roundTimeInterval: TimeInterval { get }
     
     func gameStarted()
-    func roundCompleted(withResponse response: QuizPair.ResultType)
+    func roundCompleted(withResponse response: QuizPair.ResultType?)
     
 }

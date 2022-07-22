@@ -13,6 +13,7 @@ class GameViewModel: GameViewModelProtocol {
     
     var correctAttempts: Int
     var wrongAttempts: Int
+    var roundTimeInterval: TimeInterval
     
     var currentQuizPair: QuizPair?
     
@@ -21,6 +22,7 @@ class GameViewModel: GameViewModelProtocol {
     init() {
         correctAttempts = 0
         wrongAttempts = 0
+        roundTimeInterval = 5.0
         let gameConfigs = GameConfigs(dataFileName: "words", probabilityRoundAmount: 4, correctPairPerProbabilityRoundAmount: 1, wrongAnswerOffset: 1)
         wordsManager = WordsManager(gameConfigs)
     }
@@ -29,12 +31,17 @@ class GameViewModel: GameViewModelProtocol {
         startNewRound()
     }
     
-    func roundCompleted(withResponse response: QuizPair.ResultType) {
+    func roundCompleted(withResponse response: QuizPair.ResultType?) {
         guard let currentQuizPair = currentQuizPair else {
             return
         }
         
-        response == currentQuizPair.resultType ? (correctAttempts += 1) : (wrongAttempts += 1)
+        if let resultType = response {
+            resultType == currentQuizPair.resultType ? (correctAttempts += 1) : (wrongAttempts += 1)
+        } else {
+            wrongAttempts += 1
+        }
+        
         emit(.statsUpdated)
         
         if isMaxWrongAttemptsReached() || isMaxTotalAttemptsReached() {
