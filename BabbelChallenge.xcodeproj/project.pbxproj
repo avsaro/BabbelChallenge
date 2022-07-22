@@ -20,6 +20,10 @@
 		E7DF20B6288A8DA9001EF39B /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF20B5288A8DA9001EF39B /* GameViewController.storyboard */; };
 		E7DF20B8288A8E4D001EF39B /* GameViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20B7288A8E4D001EF39B /* GameViewModelProtocol.swift */; };
 		E7DF20BA288A8E87001EF39B /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20B9288A8E87001EF39B /* GameViewModel.swift */; };
+		E7DF20BC288A93D0001EF39B /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = E7DF20BB288A93D0001EF39B /* words.json */; };
+		E7DF20BF288A9477001EF39B /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20BE288A9477001EF39B /* WordsManager.swift */; };
+		E7DF20C1288A9B93001EF39B /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C0288A9B93001EF39B /* WordPair.swift */; };
+		E7DF20C3288A9BEE001EF39B /* QuizPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C2288A9BEE001EF39B /* QuizPair.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		E7DF20B5288A8DA9001EF39B /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		E7DF20B7288A8E4D001EF39B /* GameViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelProtocol.swift; sourceTree = "<group>"; };
 		E7DF20B9288A8E87001EF39B /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		E7DF20BB288A93D0001EF39B /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		E7DF20BE288A9477001EF39B /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
+		E7DF20C0288A9B93001EF39B /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
+		E7DF20C2288A9BEE001EF39B /* QuizPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPair.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +119,12 @@
 				E7DF2082288A85D7001EF39B /* SceneDelegate.swift */,
 				E7DF2084288A85D7001EF39B /* BaseViewController.swift */,
 				E7DF20B0288A8BB9001EF39B /* GameViewController */,
+				E7DF20BD288A9444001EF39B /* WordsManager */,
 				E7DF2086288A85D7001EF39B /* Main.storyboard */,
 				E7DF2089288A85DA001EF39B /* Assets.xcassets */,
 				E7DF208B288A85DA001EF39B /* LaunchScreen.storyboard */,
 				E7DF208E288A85DA001EF39B /* Info.plist */,
+				E7DF20BB288A93D0001EF39B /* words.json */,
 			);
 			path = BabbelChallenge;
 			sourceTree = "<group>";
@@ -145,6 +155,16 @@
 				E7DF20B5288A8DA9001EF39B /* GameViewController.storyboard */,
 			);
 			path = GameViewController;
+			sourceTree = "<group>";
+		};
+		E7DF20BD288A9444001EF39B /* WordsManager */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF20BE288A9477001EF39B /* WordsManager.swift */,
+				E7DF20C0288A9B93001EF39B /* WordPair.swift */,
+				E7DF20C2288A9BEE001EF39B /* QuizPair.swift */,
+			);
+			path = WordsManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +275,7 @@
 				E7DF20B6288A8DA9001EF39B /* GameViewController.storyboard in Resources */,
 				E7DF208A288A85DA001EF39B /* Assets.xcassets in Resources */,
 				E7DF2088288A85D7001EF39B /* Main.storyboard in Resources */,
+				E7DF20BC288A93D0001EF39B /* words.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,10 +301,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7DF20BA288A8E87001EF39B /* GameViewModel.swift in Sources */,
+				E7DF20C1288A9B93001EF39B /* WordPair.swift in Sources */,
+				E7DF20BF288A9477001EF39B /* WordsManager.swift in Sources */,
 				E7DF20B2288A8BF3001EF39B /* GameViewController.swift in Sources */,
 				E7DF2085288A85D7001EF39B /* BaseViewController.swift in Sources */,
 				E7DF2081288A85D7001EF39B /* AppDelegate.swift in Sources */,
 				E7DF2083288A85D7001EF39B /* SceneDelegate.swift in Sources */,
+				E7DF20C3288A9BEE001EF39B /* QuizPair.swift in Sources */,
 				E7DF20B8288A8E4D001EF39B /* GameViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
