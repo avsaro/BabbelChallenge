@@ -31,6 +31,11 @@ class GameViewModel: GameViewModelProtocol {
         startNewRound()
     }
     
+    func gameRestarted() {
+        resetViewModel()
+        startNewRound()
+    }
+    
     func roundCompleted(withResponse response: QuizPair.ResultType?) {
         guard let currentQuizPair = currentQuizPair else {
             return
@@ -44,8 +49,11 @@ class GameViewModel: GameViewModelProtocol {
         
         emit(.statsUpdated)
         
-        if isMaxWrongAttemptsReached() || isMaxTotalAttemptsReached() {
-            emit(.gameEnded)
+        if isMaxWrongAttemptsReached() {
+            emit(.gameEnded(gameWon: false))
+            return
+        } else if isMaxTotalAttemptsReached() {
+            emit(.gameEnded(gameWon: true))
             return
         }
         
@@ -68,5 +76,13 @@ class GameViewModel: GameViewModelProtocol {
     
     private func isMaxTotalAttemptsReached() -> Bool {
         return correctAttempts + wrongAttempts >= 15
+    }
+    
+    private func resetViewModel() {
+        correctAttempts = 0
+        wrongAttempts = 0
+        currentQuizPair = nil
+        wordsManager.resetManager()
+        emit(.statsUpdated)
     }
 }

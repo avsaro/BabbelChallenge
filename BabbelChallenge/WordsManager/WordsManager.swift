@@ -50,6 +50,10 @@ class WordsManager {
         return nil
     }
     
+    public func resetManager() {
+        resetProbabilityRound()
+    }
+    
     public func getQuizPair() -> QuizPair  {
         if amountInProbabilityRound == gameConfigs.probabilityRoundAmount {
             resetProbabilityRound()

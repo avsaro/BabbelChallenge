@@ -11,7 +11,7 @@ enum GameViewModelChange {
     
     case roundStarted(quizPair: QuizPair)
     case statsUpdated
-    case gameEnded
+    case gameEnded(gameWon: Bool)
     
 }
 
@@ -23,6 +23,7 @@ protocol GameViewModelProtocol {
     var roundTimeInterval: TimeInterval { get }
     
     func gameStarted()
+    func gameRestarted()
     func roundCompleted(withResponse response: QuizPair.ResultType?)
     
 }

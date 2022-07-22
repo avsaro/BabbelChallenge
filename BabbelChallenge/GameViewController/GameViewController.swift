@@ -40,8 +40,8 @@ class GameViewController: BaseViewController {
                 case .statsUpdated:
                     self.correctAttemptsAmountLabel.text = "\(self.viewModel.correctAttempts)"
                     self.wrongAttemptsAmountLabel.text = "\(self.viewModel.wrongAttempts)"
-                case .gameEnded:
-                    exit(0)
+                case .gameEnded(gameWon: let gameWon):
+                    showGameEndPopup(gameWon: gameWon)
             }
         }
     }
@@ -64,6 +64,30 @@ class GameViewController: BaseViewController {
     private func stopTimer() {
         timer?.invalidate()
         timer = nil
+    }
+    
+    private func showGameEndPopup(gameWon: Bool) {
+        let alertController = UIAlertController(title: getGameEndPopupTitle(gameWon), message: getGameEndPopupMessage(), preferredStyle: .alert)
+        
+        let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { [unowned self] (action) in
+            self.viewModel.gameRestarted()
+        })
+        alertController.addAction(restartAction)
+        
+        let quitAction = UIAlertAction(title: "Quit", style: .destructive, handler: { (action) in
+            exit(0)
+        })
+        alertController.addAction(quitAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func getGameEndPopupTitle(_ gameWon: Bool) -> String {
+        return gameWon ? "You Won!" : "You Lost!"
+    }
+    
+    private func getGameEndPopupMessage() -> String {
+        return "Correct Attempts: \(self.viewModel.correctAttempts)\nWrong Attempts: \(self.viewModel.wrongAttempts)"
     }
     
     //MARK: - Button Actions
