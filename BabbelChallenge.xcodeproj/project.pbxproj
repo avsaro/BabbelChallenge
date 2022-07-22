@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		E7DF2081288A85D7001EF39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF2080288A85D7001EF39B /* AppDelegate.swift */; };
 		E7DF2083288A85D7001EF39B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF2082288A85D7001EF39B /* SceneDelegate.swift */; };
-		E7DF2085288A85D7001EF39B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF2084288A85D7001EF39B /* ViewController.swift */; };
+		E7DF2085288A85D7001EF39B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF2084288A85D7001EF39B /* BaseViewController.swift */; };
 		E7DF2088288A85D7001EF39B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF2086288A85D7001EF39B /* Main.storyboard */; };
 		E7DF208A288A85DA001EF39B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DF2089288A85DA001EF39B /* Assets.xcassets */; };
 		E7DF208D288A85DA001EF39B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF208B288A85DA001EF39B /* LaunchScreen.storyboard */; };
 		E7DF2098288A85DB001EF39B /* BabbelChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF2097288A85DB001EF39B /* BabbelChallengeTests.swift */; };
 		E7DF20A2288A85DB001EF39B /* BabbelChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20A1288A85DB001EF39B /* BabbelChallengeUITests.swift */; };
 		E7DF20A4288A85DB001EF39B /* BabbelChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20A3288A85DB001EF39B /* BabbelChallengeUITestsLaunchTests.swift */; };
+		E7DF20B2288A8BF3001EF39B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20B1288A8BF3001EF39B /* GameViewController.swift */; };
+		E7DF20B6288A8DA9001EF39B /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF20B5288A8DA9001EF39B /* GameViewController.storyboard */; };
+		E7DF20B8288A8E4D001EF39B /* GameViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20B7288A8E4D001EF39B /* GameViewModelProtocol.swift */; };
+		E7DF20BA288A8E87001EF39B /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20B9288A8E87001EF39B /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		E7DF207D288A85D7001EF39B /* BabbelChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabbelChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DF2080288A85D7001EF39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7DF2082288A85D7001EF39B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E7DF2084288A85D7001EF39B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7DF2084288A85D7001EF39B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E7DF2087288A85D7001EF39B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7DF2089288A85DA001EF39B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7DF208C288A85DA001EF39B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		E7DF209D288A85DB001EF39B /* BabbelChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbelChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DF20A1288A85DB001EF39B /* BabbelChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelChallengeUITests.swift; sourceTree = "<group>"; };
 		E7DF20A3288A85DB001EF39B /* BabbelChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7DF20B1288A8BF3001EF39B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E7DF20B5288A8DA9001EF39B /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
+		E7DF20B7288A8E4D001EF39B /* GameViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelProtocol.swift; sourceTree = "<group>"; };
+		E7DF20B9288A8E87001EF39B /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,8 @@
 			children = (
 				E7DF2080288A85D7001EF39B /* AppDelegate.swift */,
 				E7DF2082288A85D7001EF39B /* SceneDelegate.swift */,
-				E7DF2084288A85D7001EF39B /* ViewController.swift */,
+				E7DF2084288A85D7001EF39B /* BaseViewController.swift */,
+				E7DF20B0288A8BB9001EF39B /* GameViewController */,
 				E7DF2086288A85D7001EF39B /* Main.storyboard */,
 				E7DF2089288A85DA001EF39B /* Assets.xcassets */,
 				E7DF208B288A85DA001EF39B /* LaunchScreen.storyboard */,
@@ -125,6 +134,17 @@
 				E7DF20A3288A85DB001EF39B /* BabbelChallengeUITestsLaunchTests.swift */,
 			);
 			path = BabbelChallengeUITests;
+			sourceTree = "<group>";
+		};
+		E7DF20B0288A8BB9001EF39B /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7DF20B7288A8E4D001EF39B /* GameViewModelProtocol.swift */,
+				E7DF20B9288A8E87001EF39B /* GameViewModel.swift */,
+				E7DF20B1288A8BF3001EF39B /* GameViewController.swift */,
+				E7DF20B5288A8DA9001EF39B /* GameViewController.storyboard */,
+			);
+			path = GameViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7DF208D288A85DA001EF39B /* LaunchScreen.storyboard in Resources */,
+				E7DF20B6288A8DA9001EF39B /* GameViewController.storyboard in Resources */,
 				E7DF208A288A85DA001EF39B /* Assets.xcassets in Resources */,
 				E7DF2088288A85D7001EF39B /* Main.storyboard in Resources */,
 			);
@@ -258,9 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DF2085288A85D7001EF39B /* ViewController.swift in Sources */,
+				E7DF20BA288A8E87001EF39B /* GameViewModel.swift in Sources */,
+				E7DF20B2288A8BF3001EF39B /* GameViewController.swift in Sources */,
+				E7DF2085288A85D7001EF39B /* BaseViewController.swift in Sources */,
 				E7DF2081288A85D7001EF39B /* AppDelegate.swift in Sources */,
 				E7DF2083288A85D7001EF39B /* SceneDelegate.swift in Sources */,
+				E7DF20B8288A8E4D001EF39B /* GameViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +465,7 @@
 				INFOPLIST_FILE = BabbelChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = GameViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +492,7 @@
 				INFOPLIST_FILE = BabbelChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = GameViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
