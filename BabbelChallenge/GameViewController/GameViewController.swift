@@ -13,6 +13,7 @@ class GameViewController: BaseViewController {
     @IBOutlet weak var wrongAttemptsAmountLabel: UILabel!
     @IBOutlet weak var spanishWordLabel: UILabel!
     @IBOutlet weak var englishWordLabel: UILabel!
+    @IBOutlet weak var spanishWordVerticalCenterLayoutConstraint: NSLayoutConstraint!
     
     var viewModel: GameViewModelProtocol!
     var timer: Timer?
@@ -23,6 +24,10 @@ class GameViewController: BaseViewController {
         super.viewDidLoad()
         viewModel = GameViewModel()
         bindViewModel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.gameStarted()
     }
     
@@ -37,6 +42,7 @@ class GameViewController: BaseViewController {
                     self.englishWordLabel.text = quizPair.englishWord
                     self.spanishWordLabel.text = quizPair.spanishWord
                     self.startTimer()
+                    self.startAnimation()
                 case .statsUpdated:
                     self.correctAttemptsAmountLabel.text = "\(self.viewModel.correctAttempts)"
                     self.wrongAttemptsAmountLabel.text = "\(self.viewModel.wrongAttempts)"
@@ -47,6 +53,18 @@ class GameViewController: BaseViewController {
     }
     
     //MARK: - Helpers
+    
+    private func startAnimation() {
+        spanishWordLabel.layer.removeAllAnimations()
+        let targetConstantValue = spanishWordVerticalCenterLayoutConstraint.constant
+        let startingConstantValue = (spanishWordLabel.superview?.frame.height ?? 0) / -2
+        spanishWordVerticalCenterLayoutConstraint.constant = startingConstantValue
+        spanishWordLabel.superview?.layoutIfNeeded()
+        UIView.animate(withDuration: viewModel.roundTimeInterval, delay: 0, options: .allowAnimatedContent, animations: { [unowned self] in
+            self.spanishWordVerticalCenterLayoutConstraint.constant = targetConstantValue
+            self.spanishWordLabel.superview?.layoutIfNeeded()
+        }, completion: nil)
+    }
     
     private func startTimer() {
         guard timer == nil else {
@@ -67,6 +85,8 @@ class GameViewController: BaseViewController {
     }
     
     private func showGameEndPopup(gameWon: Bool) {
+        spanishWordLabel.layer.removeAllAnimations()
+        
         let alertController = UIAlertController(title: getGameEndPopupTitle(gameWon), message: getGameEndPopupMessage(), preferredStyle: .alert)
         
         let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { [unowned self] (action) in

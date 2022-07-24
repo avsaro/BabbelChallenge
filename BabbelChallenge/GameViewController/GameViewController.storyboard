@@ -169,6 +169,7 @@
                         <outlet property="correctAttemptsAmountLabel" destination="wjW-Jf-fD9" id="R5Q-0i-Ywf"/>
                         <outlet property="englishWordLabel" destination="iBd-0o-JAO" id="KJW-t2-3NW"/>
                         <outlet property="spanishWordLabel" destination="Nav-34-kBN" id="ewj-Li-0Ee"/>
+                        <outlet property="spanishWordVerticalCenterLayoutConstraint" destination="a0b-FX-ola" id="QIb-lZ-ufW"/>
                         <outlet property="wrongAttemptsAmountLabel" destination="Bhw-Ho-EIe" id="1Pc-bI-JdQ"/>
                     </connections>
                 </viewController>
