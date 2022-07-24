@@ -12,7 +12,6 @@
 		E7DF2085288A85D7001EF39B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF2084288A85D7001EF39B /* BaseViewController.swift */; };
 		E7DF208A288A85DA001EF39B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DF2089288A85DA001EF39B /* Assets.xcassets */; };
 		E7DF208D288A85DA001EF39B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DF208B288A85DA001EF39B /* LaunchScreen.storyboard */; };
-		E7DF2098288A85DB001EF39B /* BabbelChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF2097288A85DB001EF39B /* BabbelChallengeTests.swift */; };
 		E7DF20A2288A85DB001EF39B /* BabbelChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20A1288A85DB001EF39B /* BabbelChallengeUITests.swift */; };
 		E7DF20A4288A85DB001EF39B /* BabbelChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20A3288A85DB001EF39B /* BabbelChallengeUITestsLaunchTests.swift */; };
 		E7DF20B2288A8BF3001EF39B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20B1288A8BF3001EF39B /* GameViewController.swift */; };
@@ -24,6 +23,7 @@
 		E7DF20C1288A9B93001EF39B /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C0288A9B93001EF39B /* WordPair.swift */; };
 		E7DF20C3288A9BEE001EF39B /* QuizPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C2288A9BEE001EF39B /* QuizPair.swift */; };
 		E7DF20C5288ACE71001EF39B /* GameConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C4288ACE71001EF39B /* GameConfigs.swift */; };
+		E7DF20C9288D699F001EF39B /* WordsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DF20C8288D699F001EF39B /* WordsManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 		E7DF208C288A85DA001EF39B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7DF208E288A85DA001EF39B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7DF2093288A85DB001EF39B /* BabbelChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbelChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7DF2097288A85DB001EF39B /* BabbelChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelChallengeTests.swift; sourceTree = "<group>"; };
 		E7DF209D288A85DB001EF39B /* BabbelChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbelChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DF20A1288A85DB001EF39B /* BabbelChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelChallengeUITests.swift; sourceTree = "<group>"; };
 		E7DF20A3288A85DB001EF39B /* BabbelChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		E7DF20C0288A9B93001EF39B /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
 		E7DF20C2288A9BEE001EF39B /* QuizPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPair.swift; sourceTree = "<group>"; };
 		E7DF20C4288ACE71001EF39B /* GameConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfigs.swift; sourceTree = "<group>"; };
+		E7DF20C8288D699F001EF39B /* WordsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 		E7DF2096288A85DB001EF39B /* BabbelChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				E7DF2097288A85DB001EF39B /* BabbelChallengeTests.swift */,
+				E7DF20C8288D699F001EF39B /* WordsManagerTests.swift */,
 			);
 			path = BabbelChallengeTests;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DF2098288A85DB001EF39B /* BabbelChallengeTests.swift in Sources */,
+				E7DF20C9288D699F001EF39B /* WordsManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
